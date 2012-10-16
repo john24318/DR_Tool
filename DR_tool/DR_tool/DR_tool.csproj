@@ -1,0 +1,162 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E01C4AE5-B728-49E7-9D8C-D8DF7505DB21}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GL_Utility</RootNamespace>
+    <AssemblyName>DR_tool</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsCommon.cs" />
+    <Compile Include="DR_Tool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DR_Tool.Designer.cs">
+      <DependentUpon>DR_Tool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetworkDisk_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NetworkDisk_Form.Designer.cs">
+      <DependentUpon>NetworkDisk_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetworkDisk_FTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NetworkDisk_FTP.Designer.cs">
+      <DependentUpon>NetworkDisk_FTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetworkDisk_NetDisk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NetworkDisk_NetDisk.Designer.cs">
+      <DependentUpon>NetworkDisk_NetDisk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DR_Tool.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DR_Tool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetworkDisk_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NetworkDisk_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetworkDisk_FTP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NetworkDisk_FTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NetworkDisk_NetDisk.resx">
+      <DependentUpon>NetworkDisk_NetDisk.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings_Char.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Settings_Char.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings_Email.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Settings_Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings_Parallel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Settings_Parallel.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings_Char.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings_Char.Designer.cs">
+      <DependentUpon>Settings_Char.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings_Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings_Email.Designer.cs">
+      <DependentUpon>Settings_Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings_Parallel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings_Parallel.Designer.cs">
+      <DependentUpon>Settings_Parallel.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\clsDR_tool\clsDR_tool\clsDR_tool.csproj">
+      <Project>{EFB4D638-8214-4205-8238-AA217257E1E2}</Project>
+      <Name>clsDR_tool</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\local_hdd-icon.png" />
+    <Content Include="Resources\network_hdd-icon.png" />
+    <Content Include="Resources\network_machine-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
